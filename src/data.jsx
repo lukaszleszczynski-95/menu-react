@@ -12,14 +12,14 @@ const menu = [
         id: 2,
         title: 'buttermilk pancakes',
         category: 'lunch',
-        price: 15.99,
-        img: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        desc: 'I am baby woke milkshake wolf bitters live-edge blue faBottleDroplet, hammock freegan copper mug whatever cold-pressed'
+        price: 6.99,
+        img: 'https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        desc: 'asdsdasdadas'
     },
    
     {
         id: 3,
-        title: 'buttermilk pancakes',
+        title: 'Lekker ijsjes',
         category: 'shakes',
         price: 15.99,
         img: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -28,7 +28,7 @@ const menu = [
    
     {
         id: 4,
-        title: 'buttermilk pancakes',
+        title: 'McFlurry',
         category: 'shakes',
         price: 15.99,
         img: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -69,7 +69,7 @@ const menu = [
         price: 15.99,
         img: 'https://images.unsplash.com/photo-1493770348161-369560ae357d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         desc: 'I am baby woke milkshake wolf bitters live-edge blue faBottleDroplet, hammock freegan copper mug whatever cold-pressed'
-    },
+    }
    
 ]
 export default menu
