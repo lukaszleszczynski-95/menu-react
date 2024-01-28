@@ -5,24 +5,26 @@ import data from './data'
 import Button from './Button'
 
 function App() {
+
+  
+
 const [menu, setMenu] = useState(data);
-const [filter, setFilter] = useState('all');
-const [filteredItems, setFilteredItems] = useState([]);
 
-const categories = menu.map((item) => {
+const allCategories = ['all', ...new Set(menu.map((item) => {
   return item.category
-});
+}))]
+const [categories, setCategories] = useState(allCategories);
 
-const buttonTypes = Array.from(new Set(categories));
 
-const handleFilter = button => {
-  setFilter(button)
-  console.log(button);
-  if(filter === 'all') {
-    setFilteredItems(menu);
-  } else {
-    setFilteredItems(menu.filter((item) => item.category === button))
-  }
+
+const handleFilter = category => {
+ if(category === 'all') {
+  setMenu(data);
+  return;
+ }
+ const newItems = data.filter((item) => item.category === category);
+ setMenu(newItems);
+
 }
 
 
@@ -31,14 +33,13 @@ const handleFilter = button => {
       <h1 className="main-title">Our Menu</h1>
       <div className="menu-underline"></div>
       <div className="button-container">
-      <button onClick={() => handleFilter('all')}>All</button>
-        {buttonTypes.map((button, index) => {
-          return <Button key={index} button={button} handleFilter={handleFilter}/>
+        {categories.map((category, index) => {
+          return <Button key={index} category={category} handleFilter={handleFilter}/>
         })}
       </div>
       <div className="items-container">
 
-        {filteredItems.map((item) => { 
+        {menu.map((item) => { 
           return <Item key={item.id} item={item}/>
         })}
         
