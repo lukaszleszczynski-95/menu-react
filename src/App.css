@@ -17,8 +17,21 @@
 
 
 .main-title{
+  position: relative;
   font-size: 2.75rem;
   font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.main-title::before {
+  content: '';
+  position: absolute;
+  bottom: -0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: rgb(167, 142, 0);
+  width: 10%;
 }
 
 .button-container{
@@ -28,7 +41,24 @@
 }
 
 .button-container > button {
-  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  color: rgb(167, 142, 0);
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.button-container > button:focus{
+  outline: solid 2px rgb(102, 180, 253);
+}
+
+.button-container > button:hover {
+  background-color: rgb(167, 142, 0, 0.55);
+  color: #fff;
 }
 
 img{

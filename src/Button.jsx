@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Button = ({ button }) => {
+const Button = ({ button, handleFilter }) => {
   return (
     <>
-        <button>{button}</button>
+        <button 
+          onClick={() => handleFilter(button)}
+        >{button}</button>
     </>
     
   )
